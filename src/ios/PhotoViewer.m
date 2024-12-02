@@ -184,6 +184,8 @@
         case 0x49:
         case 0x4D:
             return @"tiff";
+        case 0x52:
+          return @"webp";
     }
     return nil;
 }
