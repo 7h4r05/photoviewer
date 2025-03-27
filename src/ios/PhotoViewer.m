@@ -111,18 +111,6 @@
                         });
                     }
 
-                } else {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [activityIndicator stopAnimating];
-                        [self closeImage];
-                        // show an alert to the user
-                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Photo viewer error"
-                                                                        message:@"The file to show is not a valid image, or could not be loaded."
-                                                                       delegate:self
-                                                              cancelButtonTitle:@"OK"
-                                                              otherButtonTitles:nil];
-                        [alert show];
-                    });
                 }
             }];
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
